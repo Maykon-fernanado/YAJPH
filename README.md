@@ -13,9 +13,13 @@ In an AI-driven world, opaque decisions cost you:
     Money when bad logic goes undetected
 
 YAJPH solves this by making every decision:
+
 ✅ Explainable - Know exactly why something failed
+
 ✅ Actionable - Get specific improvement steps
+
 ✅ Auditable - Full trace of all rule checks
+
 ⚡ How It Works
 
     Define rules in simple YAML:
