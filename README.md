@@ -1,117 +1,92 @@
-# YAJPH: Statically Typed Prompts for Python
+YAJPH: The Anti-Black-Box Engine
 
-> 🔧 Write prompts like functions. Enforce structure like Pydantic.  
-> 🧠 Finally, prompt engineering you can debug, test, and trust.
+https://img.shields.io/badge/license-MIT-blue.svg
+"Every 'no' comes with a roadmap to 'yes'"
+🔍 Why Transparency Matters
 
-YAJPH (YAML + JSON + Prompt + Human) is a type-safe prompt engineering layer that lets you:
+In an AI-driven world, opaque decisions cost you:
 
-- ✅ Define strict input/output schemas for LLMs
-- ✅ Validate prompt payloads like real software
-- ✅ Debug LLM responses with explainable logs
-- ✅ Build modular, testable, auditable AI workflows
+    Trust when users can't understand rejections
 
-Think: `TypedDict` + `Pydantic` + `LLM router` — all powered by YAML.
+    Time debugging mysterious failures
 
----
+    Money when bad logic goes undetected
 
-## 🚨 Problem
+YAJPH solves this by making every decision:
+✅ Explainable - Know exactly why something failed
+✅ Actionable - Get specific improvement steps
+✅ Auditable - Full trace of all rule checks
+⚡ How It Works
 
-Prompt engineering is the new spaghetti code.
+    Define rules in simple YAML:
 
-- Inputs are unvalidated
-- Outputs are unpredictable
-- Errors are silent
-- Logic is hidden in natural language
+yaml
 
-You wouldn't ship an API like this. Why do it with AI?
+    # loan_rules.yaml
+    requirements:
+      credit_score: 620  # Minimum score
+      dti: "36%"        # Max debt-to-income
+    must_have: 
+      - employment_status
 
----
+Get clear JSON decisions:
 
-## ✅ Solution
-
-**YAJPH** brings type safety to AI logic.
-
-```yaml
-# Define inputs/outputs in YAML
-inputs:
-  name: { type: string, min_length: 1 }
-  tone: { enum: ["friendly", "formal"] }
-
-outputs:
-  greeting: { type: string }
-
-prompt: |
-  Write a {{ tone }} greeting for {{ name }}.
-
-At runtime:
 json
-{
 
-  "inputs": { "name": "Alice", "tone": "friendly" },
-  "output": { "greeting": "Hey Alice!" }
-}
-Invalid inputs or hallucinated outputs? YAJPH throws structured, explainable errors.
-🔁 Built for Real AI Systems
+    {
+      "passed": false,
+      "reason": "DTI too high",
+      "your_score": "42%",
+      "threshold": "36%",
+      "fix": "Reduce debt-to-income ratio",
+      "audit_trail": [
+        "Checked credit_score: 650 (passed)",
+        "Checked dti: 42% (failed)"
+      ]
+    }
 
-    🛠️ Works with OpenAI, Anthropic, Local Models
+🚀 Key Features
+Feature	Benefit
+🚦 Rule-based routing	Enforce business logic consistently
+📝 Self-documenting rejects	Every "no" explains why + how to fix
+🔍 Full audit trails	Compliance-ready decision logs
+🛠 CLI + Python APIs	Fits any workflow
+💡 Why YAJPH is Different
 
-    🧪 Testable, version-controlled YAML logic
+    Clear YAML rules → Humans and machines can read them
 
-    🔁 Swappable agents, clean logs, modular prompts
+    No silent failures → Every rejection includes:
 
-    📦 Use in CLI, backend services, notebooks, or agents
+        Exact failure point
 
-💡 Why It Matters
+        Current vs required values
 
-LLMs are too powerful to be unchecked.
-YAJPH is your type system, debugger, and reasoning layer — in one.
+        Actionable fixes
 
-    No more prompt soup
+    Hybrid-ready → Works with LLMs or traditional systems
 
-    No more JSON schema duct tape
+    DevOps-friendly → Batch process files via CLI
 
-    No more hallucinated pipelines
+🛠️ Get Started
+bash
 
-YAJPH lets you build cognitive software like real software.
-🔮 What’s Next?
+    pip install yajph
+    yajph --rules loan_rules.yaml --input applicant.json
 
-YAJPH is just the beginning.
+or in Python:
+python
 
-    Coming soon:
+    from yajph import Router
+    router = Router('loan_rules.yaml')
+    decision = router.evaluate(applicant_data)
+    print(decision.fix)  # "Reduce debt-to-income ratio"
 
-        🧠 "Universal Reasoning Bus" mode for multi-agent coordination
+🌟 Perfect For Developers Who Need To:
 
-        📊 Monte Carlo prompt simulations
+    Give constructive rejections in apps
 
-        🔒 Permissioned cognitive graphs for critical decisions
+    Maintain compliance trails for auditors
 
-🧠 Philosophy (Optional)
+    Build stable rules that outlive LLM hype cycles
 
-Under the hood, YAJPH is a new kind of reasoning infrastructure.
-We treat YAML as the cognitive OS — and LLMs as modular workers.
-
-It’s not just about prompts. It’s about trustable, auditable thinking at scale.
-
-But you don’t need to believe that yet.
-Just try typing your first prompt like it’s a function — and see what happens.
-📦 Install
-
-pip install yajph
-
-🏁 Quickstart
-
-▶️ Click here for a 1-minute example
-📚 Full docs coming soon
-🙌 Who’s It For?
-
-    Engineers building serious LLM apps
-
-    DevOps debugging brittle AI pipelines
-
-    Agents routing AI logic with context
-
-    Anyone tired of praying to the prompt gods
-
-💬 Want More?
-
-Follow progress, ideas, and drop in:
+Because in production, "why?" matters as much as "what?"
