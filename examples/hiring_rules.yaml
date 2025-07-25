@@ -1,0 +1,12 @@
+# examples/hiring_rules.yaml  
+requirements:
+  python: 3  # out of 5
+  sql: 4     # out of 5
+  experience: 2  # years
+
+must_have:
+  - "portfolio"
+  - "references"
+
+---
+

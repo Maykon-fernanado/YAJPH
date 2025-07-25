@@ -1,0 +1,6 @@
+# examples/applicant_bad.yaml
+credit_score: 620  # too low
+dti: "47%"         # too high  
+income: 45000      # too low
+bank_account: true
+# missing employment_verification

@@ -1,0 +1,6 @@
+# examples/candidate_good.yaml
+python: 4
+sql: 5
+experience: 3
+portfolio: "github.com/user/projects"
+references: "john@company.com, jane@startup.io"

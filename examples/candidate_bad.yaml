@@ -1,0 +1,6 @@
+# examples/candidate_bad.yaml
+python: 2  # too low (need 3)
+sql: 2     # too low (need 4) 
+experience: 1
+portfolio: "github.com/user/projects"
+# missing references

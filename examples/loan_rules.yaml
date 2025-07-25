@@ -1,0 +1,11 @@
+# examples/loan_rules.yaml
+requirements:
+  credit_score: 680
+  dti: "43%"  # debt-to-income ratio
+  income: 50000
+
+must_have:
+  - "bank_account"
+  - "employment_verification"
+
+

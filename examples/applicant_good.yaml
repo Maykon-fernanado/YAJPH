@@ -1,0 +1,7 @@
+# examples/applicant_good.yaml
+credit_score: 720
+dti: "38%"
+income: 75000
+bank_account: true
+employment_verification: true
+
