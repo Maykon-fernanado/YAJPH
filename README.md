@@ -1,6 +1,6 @@
-## YAJPH: The Anti-Black-Box Engine
+# YAJPH: The Anti-Black-Box Engine
 
-# "Every 'no' comes with a roadmap to 'yes'"
+## "Every 'no' comes with a roadmap to 'yes'"
 
 🔍 Why Transparency Matters
 
