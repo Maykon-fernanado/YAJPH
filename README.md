@@ -1,9 +1,7 @@
 YAJPH: The Anti-Black-Box Engine
 
-https://img.shields.io/badge/license-MIT-blue.svg
-
-
 "Every 'no' comes with a roadmap to 'yes'"
+
 🔍 Why Transparency Matters
 
 In an AI-driven world, opaque decisions cost you:
