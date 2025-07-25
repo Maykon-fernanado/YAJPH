@@ -50,11 +50,17 @@ json
     }
 
 🚀 Key Features
+
 Feature	Benefit
+
 🚦 Rule-based routing	Enforce business logic consistently
+
 📝 Self-documenting rejects	Every "no" explains why + how to fix
+
 🔍 Full audit trails	Compliance-ready decision logs
+
 🛠 CLI + Python APIs	Fits any workflow
+
 💡 Why YAJPH is Different
 
     Clear YAML rules → Humans and machines can read them
